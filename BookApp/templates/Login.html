@@ -16,16 +16,16 @@
         </ul>
         {% endif %}
         
-        <form action=' ' method='POST'>
+        <form action='/loginUser' method='POST'>
             
             {% csrf_token %}
             <h1>Welcome Back!</h1>
             <label>Email
-                <input type = 'text' name= '' placeholder="Enter Email here">
+                <input type = 'text' name='email' id='email' placeholder="Enter Email here">
             </label>
 
             <label>Password
-                <input type = 'password' name= '' placeholder="Enter Password here">
+                <input type = 'password' name='password' id='password' placeholder="Enter Password here">
             </label>
 
             <input type='submit' value='Log in!'> 
