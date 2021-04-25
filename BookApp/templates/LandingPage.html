@@ -4,40 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'LandingPage.css' %}">
     <title>Document</title>
 </head>
 <body>
     <div id='wrapper'>
         <header>
             <h1>Book.com</h1>
-            <ul>
-                <li>Feature</li>
-                <li>How it Works</li>
-                <li>Pricing</li>
-            </ul>
+            <nav>
+            <a href=''>Feature</a>
+                <a href=''>How it Works</a>
+                <a href=''>Pricing</a>
+            </nav>
         </header>
-        <div id= 'PropositionWrapper'>
-
-            <button href= ''></button>
-        </div>
-
-        <div id= 'FeatureWrapper'>
-
-        </div>
-
-        <div id= 'HowitworksWrapper'>
-
-        </div>
-
-        <div id= 'PricingWrapper'>
-
-
-            <button href= ''></button>
-        </div>
-
-        <footer>
+        
+        <div id='container'>
             
-        </footer>
+            <div id= 'PropositionWrapper'>
+               
+                <div class='PropLeft'>
+                    <h2>What is Book.com?</h2>
+                    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, eos. Praesentium distinctio aut quas consectetur necessitatibus consequatur reiciendis est aliquam architecto! Corporis sit explicabo commodi. Perspiciatis est dignissimos laboriosam molestias. Ullam, esse magnam qui sit consequatur provident quibusdam aliquam fuga est numquam corporis alias dolor possimus explicabo adipisci? Architecto iste laborum ipsa tempora tenetur repellendus molestiae voluptate totam dolorem harum, pariatur illo laboriosam velit repudiandae, vitae saepe magnam iusto odit sint soluta. Possimus, neque? Natus
+                    
+                    </p>
+                    <button href= ''>Get Started</button>
+                </div>
+                
+                <img id= 'Propositonimage' src='{% static "images/Book.jpg" %}'>
+            </div>
+            
+            
+            <h2>Benefits of being a member</h2>
+            <div id= 'FeatureWrapper'>
+                
+            
+                <div class='Benefitsbox'>
+                    
+                    <img src='{% static "images/freeshipping.png" %}'>
+                    <h3>Free Shipping</h3>
+                    <p>Free Shipping and garantueed to receive your
+                        item in less then two days
+                    </p>
+
+
+                </div>
+
+                <div class='Benefitsbox'>
+
+                    <img   src='{% static "images/Highquality.png" %}'>
+                    <h3>Prenium Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, praesentium deleniti minus repudiandae iusto optio laboriosam! Quod molestias nam nostrum.</p>
+                    
+                </div>
+
+                <div class='Benefitsbox'>
+
+                    <img  src='{% static "images/Exclusive.png" %}'>
+                    <h3>Exclusive Access</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, praesentium deleniti minus repudiandae iusto optio laboriosam! Quod molestias nam nostrum.</p>
+                    
+                </div>
+
+            </div>
+          
+            <h2>How it works?</h2>
+            <div id= 'HowitworksWrapper'>
+
+                <div class='Howitbox'>
+                    <h3>Step one</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed libero laboriosam, placeat laborum ut tempora? Et aperiam earum omnis ullam repellendus! Est totam nihil consequatur, recusandae eveniet maxime quibusdam nostrum nobis fugit? Possimus eius autem ad sapiente, iusto temporibus illo itaque, quo voluptate, incidunt assumenda!</p>
+
+
+                </div>
+                <img  src='{% static "images/RightArrow.png" %}'>
+                <div class='Howitbox'>
+                   
+
+                    
+                    <h3>Step Two</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed libero laboriosam, placeat laborum ut tempora? Et aperiam earum omnis ullam repellendus! Est totam nihil consequatur, recusandae eveniet maxime quibusdam nostrum nobis fugit? Possimus eius autem ad sapiente, iusto temporibus illo itaque, quo voluptate, incidunt assumenda!</p>
+                    
+                </div>
+                <img  src='{% static "images/RightArrow.png" %}'>
+                <div class='Howitbox'>
+
+                    
+                    <h3>Step 3</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed libero laboriosam, placeat laborum ut tempora? Et aperiam earum omnis ullam repellendus! Est totam nihil consequatur, recusandae eveniet maxime quibusdam nostrum nobis fugit? Possimus eius autem ad sapiente, iusto temporibus illo itaque, quo voluptate, incidunt assumenda!</p>
+                </div>
+            </div>
+            <h2>Pricing</h2>
+            <div id= 'PricingWrapper'>
+                <h3>Prenium Membership</h3>
+                <h4>12.99/Month</h4>
+                
+                <ul>
+                    <li>Get up 12 books of you choice per month</li>
+                    <li>Free Shipping</li>
+                    <li>Exclusive acess to book signing from your favorite authors</li>
+                </ul>
+                
+                <button href= ''>Get Started</button>
+            </div>
+            
+            <footer>
+                 <p>Copyright @2021 All right reserves</p>
+            </footer>
+        
+        </div>
+        
 
 
 
