@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ordersuccess.css' %}">
     <title>Document</title>
 </head>
 <body>
     <div id='wrapper'>
         <header>
-            <ul>
-                <li> <a href=''>Home</a></li>
-                <li> <a href=''> Profile</a></li>
-                <li> <a href=''>Recent Order</a></li>
-                <li> <a href=''>Log out</a></li>
-            </ul>
+            <h1>Book.com</h1>
+            <nav>
+            <a href=''>Home</a>
+                <a href=''>Profile</a>
+                <a href=''>Recent Order</a>
+                <a href=''>Log out</a>
+            </nav>
         </header>
+        <div id='container'>
+            <div id= 'WrapperOrder'>
+                <h1>Thank you for your order (USer) </h1>
+            
+                <p>Sit back and relax and you will receive your item in 2 Days </p>
+                <p>Happy Reading!</p>
+            </div>
 
         <div id= 'WrapperOrder'>
             <h1>Thank you for your order (USer) </h1>
@@ -23,7 +33,6 @@
             <p>Sit back and relax and you will receive your item in 2 Days </p>
             <p>Happy Reading!</p>
         </div>
-
     </div>
 </body>
 </html>
