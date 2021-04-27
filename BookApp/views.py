@@ -10,15 +10,27 @@ def register(request):
 def login(request):
     return render(request, 'Login.html')
 
+def edit(request):
+    if 'user_id' not in request.session:
+            return redirect('/')
+    
+    user = User.objects.get(id=request.session['user_id'])
+    context = {
+        'user': user
+    }
+    return render(request, 'ProfileEdit.html', context)
+
+def logout(request):
+    request.session.clear()
+    return redirect('/')
+
 def landingPage(request):
     if 'user_id' not in request.session:
         return redirect('/')
 
     user = User.objects.get(id=request.session['user_id'])
-
     context = {
         'user': user
-
     }
     return render(request, 'LandingPage.html', context)
 
@@ -47,6 +59,22 @@ def loginUser(request):
     messages.success(request, "You have successfully logged in!")
     return redirect('/landingPage')
 
-def logout(request):
-    request.session.clear()
-    return redirect('/')
+def editUser(request):
+    errors = User.objects.editUser(request.POST)
+    if request.method == "GET":
+        return redirect('/landingPage')
+    if errors:
+        for e in errors.values():
+            messages.error(request, e)
+        return redirect('/edit')
+    edit_user = User.objects.get(id=request.session['user_id'])
+    edit_user.first_name= request.POST['first_name']
+    edit_user.last_name= request.POST['last_name']
+    edit_user.email=request.POST['email']
+    edit_user.username=request.POST['username']
+    edit_user.password=bcrypt.hashpw(request.POST['password'].encode(), bcrypt.gensalt()).decode()
+    #edit_user.password=request.POST['password']
+    #pw = bcrypt.hashpw(request.POST['password'].encode(), bcrypt.gensalt()).decode()
+    edit_user.save()
+    messages.success(request, "Updated!")
+    return redirect('/edit')
