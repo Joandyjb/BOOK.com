@@ -13,6 +13,9 @@ def register(request):
 def login(request):
     return render(request, 'Login.html')
 
+def recentorder(request):
+    return render(request, 'recentorder.html')
+
 def homePage(request):
     books = Book.objects.all()
     context = {

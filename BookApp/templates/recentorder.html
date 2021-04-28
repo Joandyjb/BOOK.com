@@ -13,10 +13,10 @@
         <header>
             <h1>Book.com</h1>
             <nav>
-            <a href=''>Home</a>
+                <a href='homePage'>Home</a>
                 <a href=''>Profile</a>
-                <a href=''>Recent Order</a>
-                <a href=''>Log out</a>
+                <a href='recentorder'>Recent Order</a>
+                <a href='logout'>Log out</a>
             </nav>
         </header>
 
@@ -24,21 +24,23 @@
             <table style="width:100%" class='styled-table'>
                 <thead>
                     <tr>
-                        <th>Order Number </th>
+                        <th>Order Number</th>
                         <th>Item Purchased</th>
-                        <th> Date of purchase</th>
+                        <th>Date of purchase</th>
                     </tr>
                 </thead>
+            {% for books in all_books %}
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
+                        <td>{{book.id}} </td>
+                        <td>{{book.title}}</td>
+                        <td>{{book.updated_at}}</td>
                     </tr>
-                </tbody>    
+                </tbody>
+            {% endfor %}
             </table>
+            
         </div>
-
     </div>
 </body>
 </html>
