@@ -34,8 +34,15 @@
         <div id= 'BookOrders'>
             <h1>Hello User</h1>
 
-
-
+            <div class="books">
+                {% for book in books %}    
+                    <p>{{book.author}}</p>
+                    <p>{{book.title}}</p>
+                    <p>{{book.yearPublished}}</p>
+                    <p>{{book.genre}}</p>
+                    <br>
+                {% endfor %}
+            </div>
 
 
                 <button>Purchase Books</button>

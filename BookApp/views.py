@@ -4,11 +4,21 @@ from BookApp.models import *
 import bcrypt
 from django.contrib import messages
 
+def landingPage(request):
+    return render(request, 'LandingPage.html')
+
 def register(request):
     return render(request, 'Register.html')
 
 def login(request):
     return render(request, 'Login.html')
+
+def homePage(request):
+    books = Book.objects.all()
+    context = {
+        'books': books
+    }
+    return render(request, 'Bookhomepage.html', context)
 
 def edit(request):
     if 'user_id' not in request.session:
@@ -24,16 +34,6 @@ def logout(request):
     request.session.clear()
     return redirect('/')
 
-def landingPage(request):
-    if 'user_id' not in request.session:
-        return redirect('/')
-
-    user = User.objects.get(id=request.session['user_id'])
-    context = {
-        'user': user
-    }
-    return render(request, 'LandingPage.html', context)
-
 def registerUser(request):
     if request.method == "GET":
         return redirect('/')
@@ -46,7 +46,7 @@ def registerUser(request):
         new_user = User.objects.register(request.POST)
         request.session['user_id'] = new_user.id
         messages.success(request, "You have successfully registered!")
-        return redirect('/landingPage')
+        return redirect('/homePage')
 
 def loginUser(request):
     if request.method == "GET":
@@ -57,12 +57,12 @@ def loginUser(request):
     user = User.objects.get(email=request.POST['email'])
     request.session['user_id'] = user.id
     messages.success(request, "You have successfully logged in!")
-    return redirect('/landingPage')
+    return redirect('/homePage')
 
 def editUser(request):
     errors = User.objects.editUser(request.POST)
     if request.method == "GET":
-        return redirect('/landingPage')
+        return redirect('/homePage')
     if errors:
         for e in errors.values():
             messages.error(request, e)
