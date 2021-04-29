@@ -3,57 +3,124 @@
 * {
     margin:0;
     padding: 0;
-    background-color: lightgrey
 }
 
-#wrapper{
-    width: 1000px;
+body {
+    /* width: 1000px; */
+    background-color: whitesmoke;
 }
 
-#container{
-    margin-top: 100px;
+/* #wrapper{
+    margin-top: 30px;
+} */
+
+/* .header{
+    height: 80px;
+    background:#1D1D1D;
+    width: 100%;
+    z-index: 12 ;
+    position: fixed;
+    padding-top: 10px;
+    top: 0;
+    align-items: center;
+} */
+
+.header h1{
+    display: inline;
+    margin-top: 40px;
+    margin-left: 55px;
+    padding:0;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
 }
 
-#container ul{
-    font-size: 16px;
-    font-family: Montserrat-600;
+#wrapper ul{
+    margin-bottom: 100px;
+    margin: auto;
+    width: 50%;
+    width: 400px;
+    list-style-type: none;
+}
+
+#wrapper li{
+    padding: 3px;
+    font-size: 14px;
+    font-family: Montserrat;
+    color: red;
+}
+
+#container {
+    margin-top: 200px;
+    margin: auto;
+    width: 50%;
+    width: 650px;
+    background-color: black;
+    border-radius: 2%;
 }
 
 .form{
-    margin-left: 400px;
-    margin-top: 100px;
+    /* display: flex;
+    margin-left: 200px; */
     padding-bottom: 10px;
-    width: 450px;
-    text-align: center;
-    font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 50%;
-    outline: 2px solid black;
+    width: 400px;
+    color: white;
+    
 }
 
-.form h2{
-    padding: 15px;
+#container h2{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 50%;
+}
+
+.form p{
+    font-family: Montserrat;
+    font-size: 15px;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding-top: 5px;
 }
 
 .form input{
-    padding-bottom: 5px;
-    padding-top: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
     margin-bottom: 5px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 18px;
+    font-family: Montserrat;
+    font-size: 16px;
+    color: white;
 }
 
+.form input[type=submit] { 
+    background-color:green;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+
 .login p{
-    margin: 15px 0px 0px 425px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-family: Montserrat;
     font-size: 20px;
+    color: white;
 }
 
 .login button{
+    margin-left: 15px;
     padding: 5px;
     border: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: green;
+    font-family: Montserrat;
     font-size: 20px;
+}
+
+.login  a:link{
+    color: white;
+    text-decoration: none;
 }
 
 
