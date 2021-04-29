@@ -6,24 +6,12 @@
 }
 
 body {
-    /* width: 1000px; */
     background-color: whitesmoke;
 }
 
-/* #wrapper{
-    margin-top: 30px;
-} */
-
-/* .header{
+.header {
     height: 80px;
-    background:#1D1D1D;
-    width: 100%;
-    z-index: 12 ;
-    position: fixed;
-    padding-top: 10px;
-    top: 0;
-    align-items: center;
-} */
+}
 
 .header h1{
     display: inline;
@@ -110,10 +98,10 @@ body {
 }
 
 .login button{
-    margin-left: 15px;
-    padding: 5px;
+    /* margin-left: 15px; */
+    /* padding: 5px; */
     border: none;
-    background-color: green;
+    background-color: black;
     font-family: Montserrat;
     font-size: 20px;
 }
@@ -121,6 +109,10 @@ body {
 .login  a:link{
     color: white;
     text-decoration: none;
+}
+
+.login a:hover{
+    text-decoration: underline;
 }
 
 

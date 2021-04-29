@@ -10,7 +10,10 @@
 </head>
 <body>
     <div id='wrapper'>
-        <div id="container">
+        <div class="header">
+            <h1>Book.com</h1>
+        </div>
+        <div class="messages">
             {% if messages %}
             <ul >    
                 {% for message in messages %}    
@@ -18,22 +21,18 @@
                 {% endfor %}
             </ul>
             {% endif %}
-            <br>
+        </div>
+        <div id="container">
             <h1>Welcome Back!</h1>
-            <h3>Please log in to view our book selection!</h3>
             <div class="loginUser">
                 <form action='/loginUser' method='POST'>
                 {% csrf_token %}
-                    <label>Email
-                        <div class="email">
-                            <input type = 'text' name='email' id='email' placeholder="Enter Email here">
-                        </div>
+                    <label> <p>Email</p>
+                        <input type = 'text' name='email' id='email' placeholder="Enter Email here">
                     </label>
                     <br>
-                    <label>Password
-                        <div class="password">
-                            <input type = 'password' name='password' id='password' placeholder="Enter Password here">
-                        </div>
+                    <label> <p>Password</p>
+                        <input type = 'password' name='password' id='password' placeholder="Enter Password here">
                     </label>
                     <br>
                     <div class="submit">

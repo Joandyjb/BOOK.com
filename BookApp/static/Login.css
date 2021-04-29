@@ -3,72 +3,85 @@
 * {
     margin:0;
     padding: 0;
-    background-color: lightgrey
 }
 
-#wrapper{
-    width: 1000px;
-    display: flex;
-    justify-content: center;
+body {
+    background-color: whitesmoke;
 }
 
-#container{
-    margin-top: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 50%;
-    display: flex;
-    justify-content: center;
+.header{
+    height: 120px;
 }
 
-#container h1{
-    font-size: 36px;
-    text-align: center;
-}
-
-#container h3{
-    font-size: 24px;
-    text-align: center;
-    margin: 20px 0px 20px 0px;
-}
-
-#container ul{
+.header h1{
+    margin-top: 40px;
     margin-left: 30px;
+    padding:0;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+}
+
+.messages ul{
+    margin-bottom: 100px;
+    margin: auto;
+    width: 50%;
+    width: 200px;
+    padding-bottom: 25px;
+    list-style-type: none;
+}
+
+.messages li{
+    padding: 3px;
+    font-size: 14px;
+    font-family: Montserrat;
     color: red;
 }
 
-.loginUser{
+#container{
+    margin-top: 400px;
+    margin: auto;
+    width: 50%;
+    width: 520px;
+    background-color: black;
+    border-radius: 2%;
+}
+
+#container h1{
+    padding-top: 35px;
+    font-size: 36px;
+    font-family: Montserrat;
     text-align: center;
-    font-size: 20px;
-    padding: 10px;
+    color: white;
+}
+
+.loginUser{
+    font-family: Montserrat;
+    font-size: 16px;
+    padding: 20px;
+    color: white;
 }
 
 .loginUser input{
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 440px;
 }
 
-.email{
-    text-align: center;
-}
-
-.email input{
-    width: 250px;
-}
-
-.password{
-    text-align: center;
-}
-
-.password input{
-    width: 250px;
+.submit{
+    margin: auto;
+    width: 50%;
+    width: 380px;
 }
 
 .submit input{
-    background-color: rgb(29, 199, 29);
-    width: 80px;
+    background-color: green;
+    text-align: center;
+    width: 380px;
     color: whitesmoke;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 16px;
+    font-family: Montserrat;
+    font-size: 18px;
 }
 
 
