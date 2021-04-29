@@ -4,53 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Register.css' %}">
+    <title>Registration Page</title>
 </head>
 <body>
-    <div id='wrapper'>
-        <button id='loginButton'><a href='/login'>Log in</a></button>
-        
-
-        {% if messages %}
-            <ul >    
-                {% for message in messages %}    
-                    <li>{{ message }}</li>    
-                {% endfor %}
-            </ul>
+    <div id='wrapper'>        
+        <div id="container">
+            {% if messages %}
+                <ul >    
+                    {% for message in messages %}    
+                        <li>{{ message }}</li>    
+                    {% endfor %}
+                </ul>
             {% endif %}
-            <form action='/registerUser' method="POST" id ='survey-form'>
-                {% csrf_token %}
-                <h3>Create an Account</h3>
-                <label> <p>First name</p> 
-                    <input type = 'text' name='first_name' id='first_name' placeholder=" Enter your First Name here">
-                </label>
+            <div class="form">
+                <form action='/registerUser' method="POST" id ='survey-form'>
+                    {% csrf_token %}
+                    <h2>Create an Account</h2>
+                    <label> <p>First name</p> 
+                        <input type = 'text' name='first_name' id='first_name' placeholder=" Enter your First Name here" size="40">
+                    </label>
 
-                <label> <p>Last name </p> 
-                    <input type = 'text' name='last_name' id='last_name' placeholder="Enter your Last Name here">
-                </label>
+                    <label> <p>Last name </p> 
+                        <input type = 'text' name='last_name' id='last_name' placeholder="Enter your Last Name here" size="40">
+                    </label>
 
-                <label> <p>Username </p> 
-                    <input type = 'text' name='username' id='username' placeholder="Enter your Username here">
-                </label>
+                    <label> <p>Username </p> 
+                        <input type = 'text' name='username' id='username' placeholder="Enter your Username here" size="40">
+                    </label>
 
 
-                <label><p>Email  </p>
-                    <input type = 'text' name='email' id='email' placeholder="Enter your Email here">
-                </label>
+                    <label><p>Email  </p>
+<<<<<<< HEAD
+                        <input type = 'text' name='email' id='email' placeholder="Enter your Email here" size="40">
+                    </label>
 
-                <label><p>Password</p>
-                    <input type = 'password' name='password' id='password' placeholder="Enter your Password here">
-                </label>
+                    <label><p>Password</p>
+                        <input type = 'password' name='password' id='password' placeholder="Enter your Password here" size="40">
+                    </label>
 
-                <label><p>Confirm Password</p>
-                    <input type ='password' name='confirm' id='confirm' placeholder="Enter your Password Again">
-                </label>
+                    <label><p>Confirm Password</p>
+                        <input type ='password' name='confirm' id='confirm' placeholder="Enter your Password Again" size="40">
+                    </label>
+                    <br>
+                    <input type='submit' value=' Register!'>
 
-                <input type='submit' value=' Register!'> 
+                </form>
+            </div>
+            <div class="login">
+                <p>Already registered? Click Here to Login! <button id='loginButton'><a href='/login'>Log in</a></button> </p>
+            </div>
+=======
+                        <input type = 'text' name='email' id='email' placeholder="Enter your Email here">
+                    </label>
 
-            </form>
-            
-        
+                    <label><p>Password</p>
+                        <input type = 'password' name='password' id='password' placeholder="Enter your Password here">
+                    </label>
+
+                    <label><p>Confirm Password</p>
+                        <input type ='password' name='confirm' id='confirm' placeholder="Enter your Password Again">
+                    </label>
+                    <br>
+                    <input type='submit' value=' Register!'> 
+                </form>
+            </div>
+            <br>
+            <p>Already Registered? <button id='loginButton'><a href='/login'>Log in</a></button></p>
+>>>>>>> d47daa0590be1b9ce35a599ab82133c500f05f52
+        </div>
     </div>
 </body>
 </html>
