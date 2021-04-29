@@ -9,19 +9,24 @@
     <title>Registration Page</title>
 </head>
 <body>
-    <div id='wrapper'>        
+    <div id='wrapper'>
+        <div class="header">
+            <h1>Book.com</h1>
+        </div>
+        {% if messages %}
+            <ul>    
+                {% for message in messages %}    
+                    <li>{{ message }}</li>    
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+        <br>     
         <div id="container">
-            {% if messages %}
-                <ul >    
-                    {% for message in messages %}    
-                        <li>{{ message }}</li>    
-                    {% endfor %}
-                </ul>
-            {% endif %}
+            <h2>Create an Account</h2>
             <div class="form">
                 <form action='/registerUser' method="POST" id ='survey-form'>
                     {% csrf_token %}
-                    <h2>Create an Account</h2>
                     <label> <p>First name</p> 
                         <input type = 'text' name='first_name' id='first_name' placeholder=" Enter your First Name here" size="50">
                     </label>
