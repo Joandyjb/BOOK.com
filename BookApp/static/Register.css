@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    background-color: lightgrey
+}
+
+#wrapper{
+    width: 1000px;
+}
+
+#container{
+    margin-top: 100px;
+}
+
+#container ul{
+    font-size: 16px;
+    font-family: Montserrat-600;
+}
+
+.form{
+    margin-left: 400px;
+    margin-top: 100px;
+    padding-bottom: 10px;
+    width: 450px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 50%;
+    outline: 2px solid black;
+}
+
+.form h2{
+    padding: 15px;
+}
+
+.form input{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+}
+
+.login p{
+    margin: 15px 0px 0px 425px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+.login button{
+    padding: 5px;
+    border: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+
