@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Profileedit.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div id='wrapper'>
+        <header>
+            <h1>Book.com</h1>
+            <nav>
+            <a href=''>Home</a>
+                <a href=''>Profile</a>
+                <a href=''>Recent Order</a>
+                <a href=''>Log out</a>
+            </nav>
+        </header>
+        {% if messages %}
+            <ul >    
+                {% for message in messages %}    
+                    <li>{{ message }}</li>    
+                {% endfor %}
+            </ul>
+            {% endif %}
+        <div id ='container'>
+            <form action='' method="POST" id ='survey-form'>
+                {% csrf_token %}
+                <h2>Edit Your Account</h2>
+                <label> <p>First name</p> 
+                    <input type = 'text' name= '' placeholder=" Enter your First Name here">
+                </label>
+
+                <label> <p>Last name </p> 
+                    <input type = 'text' name= '' placeholder="Enter your Last Name here">
+                </label>
+
+                <label> <p>Username </p> 
+                    <input type = 'text' name= '' placeholder="Enter your Username here">
+                </label>
+
+
+                <label><p>Email  </p>
+                    <input type = 'text' name= '' placeholder="Enter your Email here">
+                </label>
+
+                <label><p>Password</p>
+                    <input type = 'password' name= '' placeholder="Enter your Password here">
+                </label>
+
+                <label><p>Confirm Password</p>
+                    <input type ='password' name= '' placeholder="Enter your Password Again">
+                </label>
+
+                <input type='submit' value=' Edit Profile!'> 
+
+            </form>
+        </div>   
+    </div>
+</body>
+</html>
