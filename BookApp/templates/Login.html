@@ -4,33 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Login.css' %}">
+    <title>Login Page</title>
 </head>
 <body>
     <div id='wrapper'>
-        {% if messages %}
-        <ul >    
-            {% for message in messages %}    
-                <li>{{ message }}</li>    
-            {% endfor %}
-        </ul>
-        {% endif %}
-        <form action='/loginUser' method='POST'>
-
-            
-            {% csrf_token %}
+        <div id="container">
+            {% if messages %}
+            <ul >    
+                {% for message in messages %}    
+                    <li>{{ message }}</li>    
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <br>
             <h1>Welcome Back!</h1>
-            <label>Email
-                <input type = 'text' name='email' id='email' placeholder="Enter Email here">
-            </label>
-
-            <label>Password
-                <input type = 'password' name='password' id='password' placeholder="Enter Password here">
-            </label>
-
-            <input type='submit' value='Log in!'> 
-            
-        </form>
+            <h3>Please log in to view our book selection!</h3>
+            <div class="loginUser">
+                <form action='/loginUser' method='POST'>
+                {% csrf_token %}
+                    <label>Email
+                        <div class="email">
+                            <input type = 'text' name='email' id='email' placeholder="Enter Email here">
+                        </div>
+                    </label>
+                    <br>
+                    <label>Password
+                        <div class="password">
+                            <input type = 'password' name='password' id='password' placeholder="Enter Password here">
+                        </div>
+                    </label>
+                    <br>
+                    <div class="submit">
+                        <input type='submit' value='Log in!'> 
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
