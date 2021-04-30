@@ -80,13 +80,14 @@ body {
     margin-bottom: 5px;
     font-family: Montserrat;
     font-size: 16px;
-    color: white;
+    color: black;
 }
 
 .form input[type=submit] { 
     background-color:green;
     padding: 5px;
     margin-top: 5px;
+    color: white;
 }
 
 

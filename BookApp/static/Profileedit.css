@@ -3,18 +3,20 @@
 * {
     margin:0;
     padding: 0;
-    /* outline: red dotted; */
-
 }
 
-#wrapper{
+body {
+    background-color: whitesmoke;
+}
+
+/* #wrapper{
     width: 1000;
     margin: 0 auto;
-}
+} */
 
-header{
+.header{
     height: 80px;
-    background:#1D1D1D;
+    background-color: black;
     width: 100%;
     z-index: 12 ;
     position: fixed;
@@ -23,10 +25,6 @@ header{
     align-items: center;
 }
 
-#container{
-    margin-top: 172px;
-    
-}
 
 h1{
     display: inline;
@@ -68,7 +66,48 @@ nav a:hover {
     color:green;
 
 }
+#container{
+    margin-top: 150px;
+}
+#edit{
+    margin: auto;
+    width: 50%;
+    width: 520px;
+    background-color: black;
+    border-radius: 2%;
+    color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+}
 
-/* form {
-    color: black;
-} */
+#edit h2{
+    font-family: Montserrat;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#edit label{
+    margin: 10px;
+}
+
+#edit input{
+    width: 460px;
+    margin: 5px 0px 15px 10px;
+}
+
+#edit input[type=submit] { 
+    background-color: green;
+    margin-left: 75px;
+    text-align: center;
+    width: 370px;   
+    color: white;
+    font-family: Montserrat;
+    font-size: 18px;
+}
+
+.messages li{
+    font-size: 14px;
+    font-family: Montserrat;
+    color: red;
+}
