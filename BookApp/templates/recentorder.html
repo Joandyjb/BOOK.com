@@ -30,6 +30,16 @@
                     </tr>
                 </thead>
                 <tbody>
+<<<<<<< HEAD
+                {% for books in all_books %}
+                    <tr>
+                        <td>{{book.id}} </td>
+                        <td>{{book.title}}</td>
+                        <td>{{book.updated_at}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+=======
                     {%for order in orders%}
                     <tr>
                         <td>{{order.id}}</td>
@@ -38,6 +48,7 @@
                     </tr>
                     {%endfor%}
                 </tbody>    
+>>>>>>> main
             </table>
         </div>
 
