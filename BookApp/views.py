@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from BookApp.models import *
+from BookApp.models import Book, Order, User
 import bcrypt
 from django.contrib import messages
 
@@ -78,3 +78,20 @@ def editUser(request):
     edit_user.save()
     messages.success(request, "Updated!")
     return redirect('/edit')
+
+def recentorders(request):
+    user= User.objects.get(id=request.session['user_id'])
+    orders = Order.objects.filter(user=user)
+    context={ 
+        "orders": orders
+    }
+    return render(request,"recentorder.html",context)    
+
+def purchase(request,book_id):
+    book= Book.objects.get(id=book_id)
+    user= User.objects.get(id=request.session['user_id'])
+    order=Order(user=user,book=book)
+    order.save()
+    return redirect('/homePage')
+    
+    
