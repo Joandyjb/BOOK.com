@@ -80,6 +80,17 @@ class Book(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+class orderManager(models.Manager):
+    pass
+
+
+class Order(models.Model):
+    user= models.ForeignKey(User,on_delete=models.CASCADE,related_name="user")
+    book= models.ForeignKey(Book,on_delete=models.CASCADE,related_name="book")
+    purchasedate= models.DateTimeField(auto_now=True)
+    objects= orderManager()
+
+
 ##STUFF TO POPULATE DB WITH
 #from BookApp.models import *
 #newbook1 = Book.objects.create(title="A Time For Mercy",author="John Grisham",yearPublished=2021,genre="fantasy")
