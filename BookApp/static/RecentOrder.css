@@ -83,7 +83,7 @@ nav a:hover {
     text-align: center;
 }
 
-.thead tr{
+.tr{
     background-color: #009879;
     color: #ffffff;
     text-align: left;
@@ -103,7 +103,7 @@ nav a:hover {
     border-bottom: 2px solid black
 }
 
-.styled-table tbody tr.active-row {
+.tbody {
     font-weight: bold;
     color: #009879;
-}`
+}
