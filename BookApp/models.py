@@ -79,6 +79,8 @@ class Book(models.Model):
     genre = models.CharField(max_length=45)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    description = models.TextField(default="")
+
 
 class orderManager(models.Manager):
     pass
@@ -91,9 +93,9 @@ class Order(models.Model):
     objects= orderManager()
 
 
-##STUFF TO POPULATE DB WITH
-#from BookApp.models import *
-#newbook1 = Book.objects.create(title="A Time For Mercy",author="John Grisham",yearPublished=2021,genre="fantasy")
-#newbook2 = Book.objects.create(title="Camino Winds",author="John Grisham",yearPublished=2020,genre="fantasy")
-#newbook3 = Book.objects.create(title="The Whistler",author="John Grisham",yearPublished=2016,genre="fantasy")
-#newbook4 = Book.objects.create(title="The Reckoning",author="John Grisham",yearPublished=2018,genre="fantasy")
+# # #STUFF TO POPULATE DB WITH
+# from BookApp.models import *
+# newbook1 = Book.objects.create(title="A Time For Mercy",author="John Grisham",yearPublished=2021,genre="fantasy",description="mercy")
+# newbook2 = Book.objects.create(title="Camino Winds",author="John Grisham",yearPublished=2020,genre="fantasy",description="Camino")
+# newbook3 = Book.objects.create(title="The Whistler",author="John Grisham",yearPublished=2016,genre="fantasy",description="Whistler")
+# newbook4 = Book.objects.create(title="The Reckoning",author="John Grisham",yearPublished=2018,genre="fantasy",description="Reckoning")
