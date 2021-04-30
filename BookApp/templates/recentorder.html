@@ -29,15 +29,15 @@
                         <th> Date of purchase</th>
                     </tr>
                 </thead>
-                {% for books in all_books %}
                 <tbody>
+                {% for books in all_books %}
                     <tr>
                         <td>{{book.id}} </td>
                         <td>{{book.title}}</td>
                         <td>{{book.updated_at}}</td>
                     </tr>
+                {% endfor %}
                 </tbody>
-            {% endfor %}   
             </table>
         </div>
 
