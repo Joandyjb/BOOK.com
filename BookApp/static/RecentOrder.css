@@ -25,7 +25,7 @@ header{
 
 #container{
     margin-top: 172px;
-    
+
 }
 
 h1{
@@ -37,7 +37,7 @@ h1{
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
-    
+
     /* margin-left: 10px; */
 }
 
@@ -47,8 +47,8 @@ nav{
     text-align: center;
     width: 100%;
     margin: auto;
-    
-    
+
+
 }
 
 nav a {
@@ -58,8 +58,8 @@ nav a {
     text-align: center;
     width: 100%;
     font-family: Montserrat;
-    
-    
+
+
 
 }
 
@@ -75,35 +75,55 @@ nav a:hover {
 
 .container {
     border-collapse: collapse;
-    margin: 25px 0;
+    margin-bottom: 20px;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .tr{
+    margin-bottom: 50px;
     background-color: #009879;
     color: #ffffff;
     text-align: left;
 }
 
-.td {
+td {
     padding: 12px 15px;
+    text-align: center;
+    margin-left: 20px;
+    padding-top: 25px;
 }
 
+th {
+    background-color: #009879;
+    width: 15px;
+    color: white;
+    font-size: 23px;
+}
+
+#background{
+    height: 20px;
+    color: #009879;
+}
 .tr {
     border-bottom: 1px solid #dddddd;
 }
 
 
-
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid black
+    border-bottom: 2px solid black;
+    float: top 20px;
+
 }
 
 .tbody {
     font-weight: bold;
     color: #009879;
+}
+table{
+    margin-top: -80px;
 }
