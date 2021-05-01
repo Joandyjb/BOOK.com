@@ -93,5 +93,11 @@ def purchase(request,book_id):
     order=Order(user=user,book=book)
     order.save()
     return redirect('/homePage')
-    
-    
+
+def viewbook(request,book_id):
+   thebook= Book.objects.get(id=book_id)
+   context={
+       "thebook":thebook
+
+   } 
+   return render(request,"bookinfo.html",context)
