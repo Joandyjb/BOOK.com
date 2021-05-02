@@ -128,14 +128,21 @@ button {
     color: white;
     font-weight: 700;
     font-size: 15px ;
-    /* font-family: impact; */
     font-family: "Proxima Nova", sans-serif;
+    text-decoration: none;
 }
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
 
 button:hover {
     width: 130px;
     height: 50px;
     font-size: 20px;
+    text-decoration: none;
 }
 
 h2 {

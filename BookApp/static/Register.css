@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 * {
     margin:0;
@@ -8,119 +9,168 @@
 body {
     /* width: 1000px; */
     background-color: whitesmoke;
+    background-image: url(staticc/ima);
 }
 
-/* #wrapper{
-    margin-top: 30px;
-} */
-
-/* .header{
-    height: 80px;
-    background:#1D1D1D;
-    width: 100%;
-    z-index: 12 ;
-    position: fixed;
-    padding-top: 10px;
-    top: 0;
-    align-items: center;
-} */
-
-.header h1{
-    display: inline;
-    margin-top: 40px;
-    margin-left: 55px;
-    padding:0;
-    font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 100;
+#wrapper{
+    padding-top: 30px;
 }
 
-#wrapper ul{
-    margin-bottom: 100px;
+
+ul{
+    margin-top: 50px ;
     margin: auto;
     width: 50%;
     width: 400px;
     list-style-type: none;
 }
 
-#wrapper li{
+li{
     padding: 3px;
     font-size: 14px;
     font-family: Montserrat;
     color: red;
+    margin: 10px
 }
 
-#container {
-    margin-top: 200px;
-    margin: auto;
-    width: 50%;
-    width: 650px;
-    background-color: black;
-    border-radius: 2%;
-}
 
-.form{
-    /* display: flex;
-    margin-left: 200px; */
-    padding-bottom: 10px;
-    width: 400px;
+
+
+button{
+    background-color: green;
     color: white;
+    font-weight: 300;
+    margin-left: 450px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+}
+
+
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-family: Passero One;
+
     
 }
 
-#container h2{
-    padding: 10px;
-    text-align: center;
-    color: white;
-    font-size: 30px;
+#wrapper{
+
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    margin: auto;
+
+}
+
+h1{
+    display: block;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 50%;
+    margin-right: 250px;
+    text-align: left;
+    /* width: 50%; */
 }
 
-.form p{
+
+
+
+form{
+    width:800px;
+    /* border: 3px Solid black; */
+    margin: 90px 20px 20px 20px;
+    background-color: lightblue;
+    /* opacity:90%; */
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    padding-top: 15px;
+    border: 2px solid black;
+
+    
+
+}
+
+
+label {
+    display: block;
+    margin: 20px;
+    font-family:Roboto ;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
     font-family: Montserrat;
-    font-size: 15px;
-    color: white;
-    margin-left: 10px;
-    margin-bottom: 5px;
-    padding-top: 5px;
+
 }
 
-.form input{
-    margin-left: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-family: Montserrat;
-    font-size: 16px;
-    color: white;
-}
-
-.form input[type=submit] { 
-    background-color:green;
-    padding: 5px;
-    margin-top: 5px;
-}
-
-
-.login p{
+h3{
     text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+    color:black;
     font-family: Montserrat;
+
+}
+
+input[type=submit] {
+    display: block;
+    margin:auto;
+    padding-bottom: auto;
+    border-radius: 6px;
+    background-color:green;
+    border: 2px;
     font-size: 20px;
+    width: 600px;
+    height: 50px;
     color: white;
 }
 
-.login button{
-    margin-left: 15px;
-    padding: 5px;
-    border: none;
-    background-color: green;
-    font-family: Montserrat;
+input[type=text] {
+    display: block;
+    margin-top:8px;
+    width: 700px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+input[type=password] {
+    display: block;
+    margin-top:8px;
+    width: 700px;
+    height: 30px;
+    border: 2px solid black;
+    padding: 4px;
+}
+
+input, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: inherit;
+    padding-left: 10px ;
+    border-radius: 5px;
+   
+    
+  }
+.login{
+    text-align: center;
+    margin-top: 7px;
     font-size: 20px;
+    
+}
+ 
+.login a {
+    color:black;
 }
 
-.login  a:link{
-    color: white;
-    text-decoration: none;
+.login a:hover {
+    color: green;
+    font-size: 30px;
 }
-
-

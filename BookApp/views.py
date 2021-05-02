@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from BookApp.models import Book, Order, User
+from BookApp.models import *
 import bcrypt
 from django.contrib import messages
 
@@ -41,7 +41,7 @@ def registerUser(request):
     if errors:
         for e in errors.values():
             messages.error(request, e)
-        return redirect('/')
+        return redirect('/register')
     else:
         new_user = User.objects.register(request.POST)
         request.session['user_id'] = new_user.id
