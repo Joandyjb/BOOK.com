@@ -21,6 +21,65 @@
         </header>
 
         <div id='container'>
+            <h2> All Recent Orders</h2>
+                <table style="width:100%" class='styled-table'>
+                  <thead>
+                      <tr>
+                        <th>Order Number </th>
+                        <th>Item Purchased</th>
+                        <th> Date of purchase</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {%for order in recentorder  %}
+                        <tr>
+                        <td>{order.id}}</td>
+                          <td> {{order.list}}</td>
+                        <td>{{order.date}} </td>
+                        
+  
+                      
+                      </tr>
+                    </tbody>    
+              {% endfor %} 
+        </table>
+      </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- <div id='container'>
+
+            <h2>  All Your recent orders!</h2>
             <table style="width:100%" class='styled-table'>
                 <thead>
                     <tr>
@@ -30,7 +89,7 @@
                     </tr>
                 </thead>
                 <tbody>
-<<<<<<< HEAD
+
                 {% for books in all_books %}
                     <tr>
                         <td>{{book.id}} </td>
@@ -39,7 +98,7 @@
                     </tr>
                 {% endfor %}
                 </tbody>
-=======
+
                     {%for order in orders%}
                     <tr>
                         <td>{{order.id}}</td>
@@ -48,9 +107,8 @@
                     </tr>
                     {%endfor%}
                 </tbody>    
->>>>>>> main
             </table>
-        </div>
+        </div> -->
 
     </div>
 </body>

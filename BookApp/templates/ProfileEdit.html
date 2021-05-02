@@ -9,34 +9,64 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome, {{ user.first_name }}!</h1>
-        <h2><a href="/homePage">Back</a></h2>
-        <h2><a href="/logout">Log Out</a></h2>
-        <hr>
-    </div>
+    <div id='wrapper'>
+        <header>
+            <h1>Book.com</h1>
+            <nav>
+                <a href='/homePage'>Home</a>
+                <a href='/edit'>Profile</a>
+                <a href='/recentorder'>Recent Order</a>
+                <a href='/logout'>Log out</a>
+            </nav>
+        </header>
 
-    <div id="edit">
-        <h2>Edit My Account</h2>
-        <form action="/editUser" method="post">
-            {% csrf_token %}
-                <label for="first_name">First Name</label>
-                <input type="text" name="first_name" id="first_name" value="{{user.first_name}}"><br>
-                <label for="last_name">Last Name</label>
-                <input type="text" name="last_name" id="last_name" value="{{user.last_name}}"><br>
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" value="{{user.email}}"><br>
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" value="{{user.username}}"><br>
-                <label for="password">Password</label>
-                <input type="text" name="password" id="password" value="{{user.password}}"><br>
-                <input type="submit" value="Update">
-        </form>
+        <div id='container'>
+            <h1>Book.com</h1>
+            {% if messages %}
+            <ul>    
+                {% for message in messages %}    
+                    <li>{{ message }}</li>    
+                {% endfor %}
+            </ul>
+        {% endif %}
+            
+            <form action="/editUser" method="post">
+                {% csrf_token %}
+          
+                <h3>Edit your Account</h3>
+                <label> <p>First name</p> 
+                    <input type = 'text' name='first_name' placeholder=" Enter your First Name here" value="{{user.first_name}}">
+                </label>
+
+                <label> <p>Last name </p> 
+                    <input type = 'text' name='last_name' placeholder="Enter your Last Name here"  value="{{user.last_name}}">
+                </label>
+
+                <label> <p>Username </p> 
+                    <input type = 'text' name= 'username' placeholder="Enter your Username here"  value="{{user.username}}">
+                </label>
+
+                
+                <label><p>Email  </p>
+                    <input type = 'text' name= 'email' placeholder="Enter your Email here" value="{{user.email}}">
+                </label>
+
+                <label><p>Password</p>
+                    <input type = 'password' name= 'password' placeholder="Enter your Password here"  value="{{user.password}}">
+                </label>
+
+                <label><p>Confirm Password</p>
+                    <input type = 'password' name= 'confirm' placeholder="Enter your Password Again">
+                </label>
+
+                <input type='submit' value= 'Update your profile'> 
+              
+
+            </form>
+
+
+        </div>
     </div>
-        <ul class="messages">
-            {% for message in messages %}
-            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-</body>
+    
+    
 </html>

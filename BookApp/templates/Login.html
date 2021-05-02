@@ -9,39 +9,46 @@
     <title>Login Page</title>
 </head>
 <body>
+
     <div id='wrapper'>
+        
         <div id="container">
+            <h1>Book.com</h1>
             {% if messages %}
-            <ul >    
+            <ul>    
                 {% for message in messages %}    
                     <li>{{ message }}</li>    
                 {% endfor %}
             </ul>
-            {% endif %}
-            <br>
-            <h1>Welcome Back!</h1>
-            <h3>Please log in to view our book selection!</h3>
-            <div class="loginUser">
-                <form action='/loginUser' method='POST'>
+        {% endif %}
+
+        
+            
+            <form action='/loginUser' method='POST'>
                 {% csrf_token %}
-                    <label>Email
-                        <div class="email">
-                            <input type = 'text' name='email' id='email' placeholder="Enter Email here">
-                        </div>
-                    </label>
-                    <br>
-                    <label>Password
-                        <div class="password">
-                            <input type = 'password' name='password' id='password' placeholder="Enter Password here">
-                        </div>
-                    </label>
-                    <br>
-                    <div class="submit">
-                        <input type='submit' value='Log in!'> 
-                    </div>
-                </form>
-            </div>
+          
+                <h3>Welcome Back!</h3>
+                
+                
+                <label><p>Email  </p>
+                    <input type = 'text' name= 'email' placeholder="Enter your Email here">
+                </label>
+
+                <label><p>Password</p>
+                    <input type = 'password' name= 'password' placeholder="Enter your Password here">
+                </label>
+
+                <input type='submit' value= 'Log in!'> 
+               
+            </form>
+            
+            
+            
+            
+            
+        
         </div>
     </div>
+
 </body>
 </html>
