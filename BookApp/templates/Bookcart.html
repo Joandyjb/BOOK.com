@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'BookHomepage.css' %}">
+    <link rel="stylesheet" href="{% static 'Bookcart.css' %}">
     <title>Document</title>
 </head>
-
 <body>
     <div id='wrapper'>
         <header>
@@ -25,23 +23,10 @@
         <div id='container'>
             
                 
-                    <h1>Hello User</h1>
-
-                    <div class="books">
-                        {% for book in books %}
-                        <p>{{book.author}}</p>
-                        <p>{{book.title}}</p>
-                        <p>{{book.yearPublished}}</p>
-                        <p>{{book.genre}}</p>
-
-                        <a href="/viewbook/{{book.id}}">viewbook</a>
-                        <br>
-                        {% endfor %}
-                    </div>
-
+                   
 
         </div>
     </div>
+    
 </body>
-
 </html>

@@ -25,7 +25,7 @@ header{
 
 #container{
     margin-top: 172px;
-    
+
 }
 
 h1{
@@ -37,8 +37,6 @@ h1{
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
-    
-    /* margin-left: 10px; */
 }
 
 nav{
@@ -47,8 +45,8 @@ nav{
     text-align: center;
     width: 100%;
     margin: auto;
-    
-    
+
+
 }
 
 nav a {
@@ -58,8 +56,8 @@ nav a {
     text-align: center;
     width: 100%;
     font-family: Montserrat;
-    
-    
+
+
 
 }
 
@@ -69,6 +67,63 @@ nav a:hover {
 
 }
 
-#container h1{
+#container h2{
     color: black;
+    text-align: center;
+    font-family: Montserrat;
+    margin-bottom: 40px;
+    font-size: 30px;
 }
+
+.container {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: Montserrat;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid black;
+    
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+    
+}
+

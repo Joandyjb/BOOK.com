@@ -11,7 +11,7 @@ urlpatterns = [
     path('editUser', views.editUser),
     path('edit', views.edit),
     path('homePage', views.homePage),
-    path('recentorders', views.recentorders),
+    path('recentorder', views.recentorders),
     path('purchasebook/<book_id>', views.purchase),
     path('viewbook/<book_id>', views.viewbook)
 ]

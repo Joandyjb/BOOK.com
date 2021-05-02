@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Bookinfo.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <html>
+    <div id='wrapper'>
+        <header>
+            <h1>Book.com</h1>
+            <nav>
+                <a href='/homePage'>Home</a>
+                <a href='/edit'>Profile</a>
+                <a href='/recentorder'>Recent Order</a>
+                <a href='/logout'>Log out</a>
+            </nav>
+        </header>
 
-<head>
-<meta charset="UTF-8">
-</head>
+        <div id='container'>
+            <p>Title:{{thebook.title}}</p>
+            <p>Author:{{thebook.author}}</p>
+            <p>YearPublished:{{thebook.yearPublished}}</p>
+            <p>Genre:{{thebook.genre}}</p>
+            <p>Description:{{thebook.description}}</p>
 
-<body>
-<p>Title:{{thebook.title}}</p>
-<p>Author:{{thebook.author}}</p>
-<p>YearPublished:{{thebook.yearPublished}}</p>
-<p>Genre:{{thebook.genre}}</p>
-<p>Description:{{thebook.description}}</p>
-</body>
+                
+                    
+            <button><a href =''>Add to Cart!</a></button>
 
-</html>
+        </div>
+    </div>
 
-</html>
+
+
+
     
 </body>
 </html>
+
+
+    
+
+
+
