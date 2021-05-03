@@ -15,15 +15,22 @@
         <header>
             <h1>Book.com</h1>
             <nav>
-                <a href=''>Home</a>
+                <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
+                <a href='/cart'>Cart</a>
                 <a href='/recentorder'>Recent Order</a>
                 <a href='/logout'>Log out</a>
             </nav>
         </header>
 
         <div id='container'>
-            
+            {% if messages %}
+                <ul>    
+                    {% for message in messages %}    
+                        <li>{{ message }}</li>    
+                    {% endfor %}
+                </ul>
+            {% endif %}
                 
                     <h1>Hello User</h1>
 
