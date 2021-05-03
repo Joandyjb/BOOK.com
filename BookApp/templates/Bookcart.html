@@ -13,18 +13,23 @@
         <header>
             <h1>Book.com</h1>
             <nav>
-                <a href=''>Home</a>
+                <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
+                <a href='/cart'>Cart</a>
                 <a href='/recentorder'>Recent Order</a>
                 <a href='/logout'>Log out</a>
             </nav>
         </header>
 
-        <div id='container'>
-            
-                
-                   
-
+        <div id='container'> 
+            {% for order in orders %}  
+                {% if order in user.ordered_by.all %}
+                    <p>{{order.user.first_name}} Order Number: {{order.id}}</p>
+                    <p>{{order.book.title}}</p>
+                {% endif %}
+            {% endfor %}
+            <p><a href="/checkout">Checkout</a></p>
+            <p><a href="/delete">Delete Order</a></p>
         </div>
     </div>
     
