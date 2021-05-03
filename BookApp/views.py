@@ -13,12 +13,25 @@ def register(request):
 def login(request):
     return render(request, 'Login.html')
 
+def success(request):
+    return render(request, 'ordersuccess.html')
+
 def homePage(request):
     books = Book.objects.all()
     context = {
         'books': books
     }
     return render(request, 'Bookhomepage.html', context)
+
+def cart(request):
+    user = User.objects.get(id=request.session['user_id'])
+    orders = Order.objects.all()
+
+    context = {
+        'user': user,
+        'orders': orders
+    }
+    return render(request, 'Bookcart.html', context)
 
 def edit(request):
     if 'user_id' not in request.session:
@@ -92,12 +105,23 @@ def purchase(request,book_id):
     user= User.objects.get(id=request.session['user_id'])
     order=Order(user=user,book=book)
     order.save()
+    messages.success(request, "Book added to cart!")
     return redirect('/homePage')
 
 def viewbook(request,book_id):
    thebook= Book.objects.get(id=book_id)
    context={
        "thebook":thebook
-
    } 
    return render(request,"bookinfo.html",context)
+
+def checkout(request):
+    orders = Order.objects.all()
+    orders.delete()
+    return redirect('/success')
+
+def delete(request):
+    orders = Order.objects.all()
+    orders.delete()
+    messages.success(request, "Books deleted!")
+    return redirect('/homePage')

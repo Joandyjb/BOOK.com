@@ -87,8 +87,8 @@ class orderManager(models.Manager):
 
 
 class Order(models.Model):
-    user= models.ForeignKey(User,on_delete=models.CASCADE,related_name="user")
-    book= models.ForeignKey(Book,on_delete=models.CASCADE,related_name="book")
+    user= models.ForeignKey(User,on_delete=models.CASCADE,related_name="ordered_by")
+    book= models.ForeignKey(Book,on_delete=models.CASCADE,related_name="book_title")
     purchasedate= models.DateTimeField(auto_now=True)
     objects= orderManager()
 

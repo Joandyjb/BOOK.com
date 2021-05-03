@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
     <link rel="stylesheet" href="{% static 'ordersuccess.css' %}">
     <title>Document</title>
 </head>
@@ -11,10 +12,11 @@
     <div id='wrapper'>
         <header>
             <ul>
-                <a href='homePage'>Home</a>
-                <a href=''>Profile</a>
-                <a href='recentorder'>Recent Order</a>
-                <a href='logout'>Log out</a>
+                <a href='/homePage'>Home</a>
+                <a href='/edit'>Profile</a>
+                <a href='/recentorder'>Cart</a>
+                <a href='/recentorder'>Recent Order</a>
+                <a href='/logout'>Log out</a>
             </ul>
         </header>
         <div id= 'WrapperOrder'>
