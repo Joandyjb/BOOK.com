@@ -77,9 +77,10 @@ class Book(models.Model):
     author = models.CharField(max_length=45, default="")
     yearPublished = models.IntegerField()
     genre = models.CharField(max_length=45)
+    Description = models.CharField (max_length= 100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    description = models.TextField(default="")
+    
 
 
 class orderManager(models.Manager):
@@ -95,7 +96,17 @@ class Order(models.Model):
 
 # # #STUFF TO POPULATE DB WITH
 # from BookApp.models import *
-# newbook1 = Book.objects.create(title="A Time For Mercy",author="John Grisham",yearPublished=2021,genre="fantasy",description="mercy")
-# newbook2 = Book.objects.create(title="Camino Winds",author="John Grisham",yearPublished=2020,genre="fantasy",description="Camino")
-# newbook3 = Book.objects.create(title="The Whistler",author="John Grisham",yearPublished=2016,genre="fantasy",description="Whistler")
-# newbook4 = Book.objects.create(title="The Reckoning",author="John Grisham",yearPublished=2018,genre="fantasy",description="Reckoning")
+# book1 = Book.objects.create(title="Harry Potter and the Philosopher's Stone",author="J. K. Rowling",yearPublished=1997,genre="Novella")
+# book2 = Book.objects.create(title="The Little Prince",author="Antoine de Saint-Exupéry",yearPublished=1943,genre="fantasy")
+# book3 = Book.objects.create(title="Dream of the Red Chamber",author="Cao Xueqin",yearPublished=1701 ,genre="fantasy")
+# book4 = Book.objects.create(title="The Hobbit",author="J. R. R. Tolkien",yearPublished=1937,genre="fantasy")
+
+# book5 = Book.objects.create(title="To Kill a Mockingbird",author="Harper Lee",yearPublished=1960,genre="Southern Gothic, Bildungsroman")
+# book6 = Book.objects.create(title="The Great Gatsby",author="F Scott Fitzgerald",yearPublished=1925,genre="Novel Fiction Tragedy")
+# book7 = Book.objects.create(title="OCEAN PREY",author="John Sandford",yearPublished=2021 ,genre="Mystery, Thriller, Suspense, Crime Fiction")
+# book8 = Book.objects.create(title="A Promised Land",author="Barack Obama",yearPublished=2020,genre="Biography, Autobiography")
+
+# book9 = Book.objects.create(title="Rowley Jefferson's Awesome Friendly Adventure",author="Jeff Kinney",yearPublished=2020, genre="Fiction, Humou")
+# book10 = Book.objects.create(title="Untamed",author="Glennon Doyle",yearPublished=2020 ,genre="MBiography, Autobiography")
+# book11 = Book.objects.create(title="Modern Comfort Food",author="Ina Garten",yearPublished=2020 ,genre="Recipe, Cookbook")
+# book12 = Book.objects.create(title="The Ballad Of Songbirds And Snakes", author="Suzanne Collins",yearPublished=2020,genre="Science Fiction, Thriller, Adventure")

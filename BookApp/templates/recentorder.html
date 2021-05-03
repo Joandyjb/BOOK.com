@@ -15,8 +15,8 @@
             <nav>
                 <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
+                <!-- <a href='/recentorder'>Recent Order</a> -->
                 <a href='/cart'>Cart</a>
-                <a href='/recentorder'>Recent Order</a>
                 <a href='/logout'>Log out</a>
             </nav>
         </header>
@@ -34,9 +34,9 @@
                     </thead>
                     <tbody>
                         
-                        {%for order in recentorder  %}
+                        {%for order in orders.all  %}
                         <tr>
-                        <td>{order.id}}</td>
+                        <td>{order.user}}</td>
                           <td> {{order.list}}</td>
                         <td>{{order.date}} </td>
                         

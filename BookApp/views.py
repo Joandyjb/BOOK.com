@@ -18,8 +18,10 @@ def success(request):
 
 def homePage(request):
     books = Book.objects.all()
+    user = User.objects.get(id=request.session['user_id'])
     context = {
-        'books': books
+        'books': books,
+        'user': user
     }
     return render(request, 'Bookhomepage.html', context)
 

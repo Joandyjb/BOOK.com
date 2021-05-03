@@ -17,8 +17,8 @@
             <nav>
                 <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
+                <!-- <a href='/recentorder'>Recent Order</a> -->
                 <a href='/cart'>Cart</a>
-                <a href='/recentorder'>Recent Order</a>
                 <a href='/logout'>Log out</a>
             </nav>
         </header>
@@ -31,22 +31,37 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-                
-                    <h1>Hello User</h1>
-
+           
+                    
+                    
                     <div class="books">
+                        
                         {% for book in books %}
-                        <p>{{book.author}}</p>
-                        <p>{{book.title}}</p>
-                        <p>{{book.yearPublished}}</p>
-                        <p>{{book.genre}}</p>
-
-                        <a href="/viewbook/{{book.id}}">viewbook</a>
+                        
+                        <img src='{% static "images/Book" %}{{book.id}}.jpg'>
+                        <div class='seperator'>  
+                            <h3>{{book.title}}</h3>
+                            <b><p>Author: </b> {{book.author}}</p>
+                            <b><p>Release Date: </b>{{book.yearPublished}}</p>
+                            <b><p> Genre: </b>{{book.genre}}</p>
+                             
+                            <button><a href="/viewbook/{{book.id}}">View Book</a> </button>
+                        </div> 
                         <br>
                         {% endfor %}
+
+                        {% for book in books %}
+                        
+                           
+                        {% endfor %}
+
+
+                        
                     </div>
 
 
+
+        
         </div>
     </div>
 </body>

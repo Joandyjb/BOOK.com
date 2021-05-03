@@ -14,7 +14,7 @@
 
 header{
     height: 80px;
-    background:#1D1D1D;
+    background:#000046;
     width: 100%;
     z-index: 12 ;
     position: fixed;
@@ -98,9 +98,10 @@ styled-table {
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: #000046;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
+    font-family: Montserrat;
 }
 
 .styled-table th,
