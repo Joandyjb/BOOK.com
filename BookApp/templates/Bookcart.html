@@ -15,21 +15,66 @@
             <nav>
                 <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
+                <!-- <a href='/recentorder'>Recent Order</a> -->
                 <a href='/cart'>Cart</a>
-                <a href='/recentorder'>Recent Order</a>
                 <a href='/logout'>Log out</a>
             </nav>
         </header>
 
         <div id='container'> 
-            {% for order in orders %}  
-                {% if order in user.ordered_by.all %}
-                    <p>{{order.user.first_name}} Order Number: {{order.id}}</p>
-                    <p>{{order.book.title}}</p>
-                {% endif %}
-            {% endfor %}
-            <p><a href="/checkout">Checkout</a></p>
-            <p><a href="/delete">Delete Order</a></p>
+            <div class= 'holder'>
+                <!-- <h2> {{user.first_name}}'s Order </h2> 
+                {% for order in orders %} 
+                    <!-- <h2> {{order.user.first_name}}'s Order </h2>  -->
+                        <!-- {% if order in user.ordered_by.all %}
+                            <br>
+                            <p>Order Number: {{order.id}}</p>
+                            <p>{{order.book.title}}</p>
+                        {% endif %}
+                    {% endfor %}
+<!--  -->
+                    <!-- <button><a href="/checkout">Checkout</a></button>
+
+                    <button><a href="/delete">Delete Order</a></button> -->
+
+
+                     <h2> {{user.first_name}}'s Order </h2>
+                     <br>
+                <table style="width:100%" class='styled-table'>
+                  <thead>
+                      <tr>
+                        <th>Iten Number </th>
+                        <th>Item Purchase</th>
+                        <th>Author</th>
+                        <!-- <th> Date of purchase</th> -->
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for order in orders %} 
+                            {% if order in user.ordered_by.all %}
+                        <tr>
+                        <td>{{order.id}}</td>
+                          <td> {{order.book.title}}</td>
+                          <td> {{order.book.author}}</td>
+
+                        
+                        
+  
+                      
+                      </tr>
+                    </tbody>
+                            {% endif %}    
+                    {% endfor %} 
+                    
+                </table>
+                <div id='button_holder'>
+                    <button><a href="/checkout">Checkout</a></button>
+
+                    <button><a href="/delete">Delete Order</a></button>
+                </div>
+            </div>
         </div>
     </div>
     

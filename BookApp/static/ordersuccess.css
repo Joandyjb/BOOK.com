@@ -14,7 +14,7 @@
 
 header{
     height: 80px;
-    background:#1D1D1D;
+    background:#000046;
     width: 100%;
     z-index: 12 ;
     position: fixed;
@@ -85,4 +85,38 @@ h1{
 
 p{
     padding-top: 10px;
+}
+
+
+
+.holder {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+   
+    border: 2px solid black;
+    border-radius:5px;
+    /* text-align: left;
+    font-size: 30px; */
+    padding: 50px;
+    font-family: Montserrat;
+}
+
+
+.holder h2 {
+    color: black;
+    margin: auto;
+}
+
+.holder h3 {
+    color: black;
+    text-align: left;
+    
+}
+
+.holder p {
+    text-align: center;
+    font-size: 30px;
+    font-family: Montserrat;
+    margin-left: 5px;
 }
