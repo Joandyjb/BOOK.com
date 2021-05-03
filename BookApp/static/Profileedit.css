@@ -15,7 +15,7 @@
 
 header{
     height: 80px;
-    background:#1D1D1D;
+    background: #000046;
     width: 100%;
     z-index: 12 ;
     position: fixed;
@@ -60,7 +60,6 @@ nav a {
     text-align: center;
     width: 100%;
     font-family: Montserrat;
-    
     
 
 }

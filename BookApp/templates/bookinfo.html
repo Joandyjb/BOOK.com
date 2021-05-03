@@ -15,23 +15,46 @@
             <nav>
                 <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
+                <!-- <a href='/recentorder'>Recent Order</a> -->
                 <a href='/cart'>Cart</a>
-                <a href='/recentorder'>Recent Order</a>
                 <a href='/logout'>Log out</a>
             </nav>
         </header>
 
         <div id='container'>
-            <p>Title:{{thebook.title}}</p>
-            <p>Author:{{thebook.author}}</p>
-            <p>YearPublished:{{thebook.yearPublished}}</p>
-            <p>Genre:{{thebook.genre}}</p>
-            <p>Description:{{thebook.description}}</p>
+           
+                
+                
+            <div class= 'holder'>
+                <h2>{{thebook.title}} </h3>
+                    <br>
+                <h3>Author:</h3> <p>{{thebook.author}}</p>
+                <br>
+                <h3>Year Published:</h3>  <p> {{thebook.yearPublished}}</p>
+                <br>
+                <h3>Genre: </h3>  <p>{{thebook.genre}}</p>
+                <br>
+                <h3>Description:</h3> {{thebook.Description}}</p>
+
+                    
+                        
+                <button><a href ='/purchasebook/{{thebook.id}}'>Add to Cart!</a></button>
+            </div>
+            <div class= 'Review'>
+                <form>
+                    <label for Post>
+                        <input type='text' name= 'Reviewpost' placeholder="Enter your review here">
+
+                    </label>
+
+                    <label for Submit>
+                        <input type="button" value="Post Review">
+                    </label>
+                </form>
+                <h2>{{thebook.title}} Review</h2>
 
                 
-                    
-            <button><a href ='/purchasebook/{{thebook.id}}'>Add to Cart!</a></button>
-
+            </div>
         </div>
     </div>
 
