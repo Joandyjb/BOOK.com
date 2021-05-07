@@ -16,12 +16,17 @@
                 <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
                 <!-- <a href='/recentorder'>Recent Order</a> -->
-                <a href='/cart'>Cart</a>
+                <!-- <a href='/cart'>Cart</a> -->
                 <a href='/logout'>Log out</a>
             </nav>
             </nav>
         </header>
-
+        
+        <div id='cartdiv'> 
+            <a href='/cart' id='cart'><img src='{% static "images/Cart.png" %}'></a> 
+        </div>  
+            
+            
         <div id='container'>
             <h1>Book.com</h1>
             {% if messages %}
@@ -31,7 +36,7 @@
                 {% endfor %}
             </ul>
         {% endif %}
-            
+         
             <form action="/editUser" method="post">
                 {% csrf_token %}
           

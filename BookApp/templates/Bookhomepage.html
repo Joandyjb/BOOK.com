@@ -18,11 +18,16 @@
                 <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
                 <!-- <a href='/recentorder'>Recent Order</a> -->
-                <a href='/cart'>Cart</a>
+                <!-- <a href='/cart'>Cart</a> -->
                 <a href='/logout'>Log out</a>
             </nav>
         </header>
-
+        
+        <div id='cartdiv'> 
+        <a href='/cart' id='cart'><img src='{% static "images/Cart.png" %}'></a> 
+        </div>  
+        
+        
         <div id='container'>
             {% if messages %}
                 <ul>    
@@ -31,8 +36,6 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-           
-                    
                     
                     <div class="books">
                         

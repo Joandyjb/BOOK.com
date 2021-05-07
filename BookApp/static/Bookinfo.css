@@ -25,7 +25,7 @@ header{
 }
 
 #container {
-    margin-top: 190px;
+    /* margin-top: 190px; */
     width: 100%;
     font-size: 30px;
     padding: 50px;
@@ -82,16 +82,37 @@ nav a:hover {
 
 }
 
+#cartdiv {
+    margin-top: 150px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+
+#cart {
+    width:64px;
+    height: 64px;
+    margin-right: 90px;
+}
+
+
+#cart:hover {
+    border: 1px solid black;
+    
+}
+
+
 
 .holder {
     background-color: white;
     width: 50%;
     margin: auto;
-   
+    margin-bottom: 70px;
     border: 2px solid black;
     border-radius:5px;
-    /* text-align: left;
-    font-size: 30px; */
     padding: 50px;
     font-family: Montserrat;
 }
@@ -103,23 +124,32 @@ nav a:hover {
     
 }
 
+.holder img {
+    width: 60%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    
+}
+
 .holder h3 {
     color: black;
     text-align: left;
     margin-bottom: 4px;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
 }
 
 .holder p {
     text-align: left;
     font-size: 30px;
     font-family: Montserrat;
+    
 
 }
 
 
 button{
-    background-color: green;
+    background-color:#000046;;
     color: white;
     font-weight: 300;
     margin: auto;
@@ -134,7 +164,7 @@ button{
 }
 
 button:hover {
-    background-color: green;
+    background-color: :#000046;;
     width: 250px;
     height: 60px;
     font-size: large;
@@ -153,14 +183,67 @@ button a {
 .Review{
     background-color: white;
     width: 50%;
-    margin: auto;
+    margin:auto;
    
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius:5px;
-    /* text-align: left;
-    font-size: 30px; */
+    
     padding: 50px;
     font-family: Montserrat;
 }
 
+.desc{
+    margin-top: 25px;
+    font-size: large;
+    text-align: left;
+}
+
+.rev_name {
+    display: inline-block;
+    font-size: small;
+    font-weight: bolder;
+}
+
+
+.rev_created{
+    display: inline-block;
+    font-size: small;
+    color:green
+}
+
+
+input[type=text]{
+    width: 90%;
+    height: 100px;
+    display: block;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px black solid;
+    font-family: Montserrat;
+    font-size: large;
+
+}
+
+input[type=submit]{
+    background-color: #000046;
+    color: white;
+    font-weight: 300;
+    margin: auto;
+    margin-bottom: 15px;
+    height: 40px;
+    width: 180px;
+    border: none;
+    border-radius: 4px;
+   
+    
+}
+
+.review_holder{
+    /* border: 1px black solid; */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 5px;
+    
 }

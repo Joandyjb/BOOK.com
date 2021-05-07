@@ -28,10 +28,13 @@ def homePage(request):
 def cart(request):
     user = User.objects.get(id=request.session['user_id'])
     orders = Order.objects.all()
+    
+
 
     context = {
         'user': user,
-        'orders': orders
+        'orders': orders,
+        
     }
     return render(request, 'Bookcart.html', context)
 
@@ -110,12 +113,29 @@ def purchase(request,book_id):
     messages.success(request, "Book added to cart!")
     return redirect('/homePage')
 
+
+def bookreview(request, book_id):
+    review = Review.objects.create(
+        rev_description = request.POST['Reviewpost'],
+        user= User.objects.get(id=request.session['user_id']),
+        book = Book.objects.get(id=book_id)    
+        )
+    return redirect(f'/viewbook/{book_id}')
+
+
 def viewbook(request,book_id):
-   thebook= Book.objects.get(id=book_id)
-   context={
-       "thebook":thebook
-   } 
-   return render(request,"bookinfo.html",context)
+    user = User.objects.get(id=request.session['user_id'])
+    # thebook= Book.objects.get(id=book_id)
+    
+    context={
+        "thebook": Book.objects.get(id=book_id),
+        'thereview' : Review.objects.all()
+
+    } 
+    return render(request,"bookinfo.html",context)
+
+
+
 
 def checkout(request):
     orders = Order.objects.all()

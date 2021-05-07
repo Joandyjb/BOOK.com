@@ -25,7 +25,7 @@ header{
 }
 
 #container{
-    margin-top: 172px;
+    /* margin-top: 172px; */
     padding-bottom: 30px;
     
 }
@@ -68,6 +68,31 @@ nav a:hover {
     font-size: 20px;
     color:green;
 
+}
+
+#cartdiv {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+
+#cart {
+    /* margin-top: 150px;
+    display: flex;
+    justify-content: flex-end; */
+    width:64px;
+    height: 64px;
+    margin-right: 100px;
+}
+
+
+
+#cart:hover {
+  border: 1px solid black;
 }
 
 

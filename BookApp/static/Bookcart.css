@@ -24,7 +24,7 @@ header{
 }
 
 #container {
-    margin-top: 190px;
+    /* margin-top: 190px; */
     width: 100%;
     
 }
@@ -75,6 +75,35 @@ nav a:hover {
     color:green;
 
 }
+
+#cartdiv {
+    margin-top: 150px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+
+#cart {
+    /* margin-top: 150px;
+    display: flex;
+    justify-content: flex-end; */
+    width:64px;
+    height: 64px;
+    margin-right: 90px;
+}
+
+
+#cart:hover {
+    border: 1px solid black;
+    /* background:#000046; */
+}
+
+
+
+
 
 h2 {
     color: black;

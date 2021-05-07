@@ -80,7 +80,22 @@ class Book(models.Model):
     Description = models.CharField (max_length= 100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    
+
+
+class reviewManager(models.Manager):
+    pass
+
+
+class Review(models.Model):
+    rev_description = models.CharField (max_length= 150)
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name="Reviewed_by")
+    book= models.ForeignKey(Book,on_delete=models.CASCADE,related_name="the_book_title")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    objects= reviewManager()
+
+
 
 
 class orderManager(models.Manager):
@@ -92,6 +107,10 @@ class Order(models.Model):
     book= models.ForeignKey(Book,on_delete=models.CASCADE,related_name="book_title")
     purchasedate= models.DateTimeField(auto_now=True)
     objects= orderManager()
+
+
+
+
 
 
 # # #STUFF TO POPULATE DB WITH

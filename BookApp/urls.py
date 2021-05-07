@@ -15,6 +15,7 @@ urlpatterns = [
     path('recentorder', views.recentorders),
     path('purchasebook/<book_id>', views.purchase),
     path('viewbook/<book_id>', views.viewbook),
+    path('review/<book_id>', views.bookreview),
     path('delete', views.delete),
     path('checkout', views.checkout),
     path('success', views.success)

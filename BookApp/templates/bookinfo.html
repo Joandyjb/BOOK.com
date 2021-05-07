@@ -16,17 +16,21 @@
                 <a href='/homePage'>Home</a>
                 <a href='/edit'>Profile</a>
                 <!-- <a href='/recentorder'>Recent Order</a> -->
-                <a href='/cart'>Cart</a>
+                <!-- <a href='/cart'>Cart</a> -->
                 <a href='/logout'>Log out</a>
             </nav>
         </header>
-
+        
+        <div id='cartdiv'> 
+            <a href='/cart' id='cart'><img src='{% static "images/Cart.png" %}'></a> 
+        </div>  
         <div id='container'>
            
                 
                 
             <div class= 'holder'>
                 <h2>{{thebook.title}} </h3>
+                    <img src='{% static "images/Book" %}{{thebook.id}}.jpg'>
                     <br>
                 <h3>Author:</h3> <p>{{thebook.author}}</p>
                 <br>
@@ -34,27 +38,49 @@
                 <br>
                 <h3>Genre: </h3>  <p>{{thebook.genre}}</p>
                 <br>
-                <h3>Description:</h3> {{thebook.Description}}</p>
-
+                <h3>Description:</h3> <p>{{thebook.Description}}</p>
+                     
                     
                         
                 <button><a href ='/purchasebook/{{thebook.id}}'>Add to Cart!</a></button>
             </div>
+            
+            
             <div class= 'Review'>
-                <form>
+                <h2>Book Reviews</h2>
+                <form action='/review/{{thebook.id}}' method='POST'>
+                    {% csrf_token %}
                     <label for Post>
-                        <input type='text' name= 'Reviewpost' placeholder="Enter your review here">
+                        <input type='text' name='Reviewpost' >
 
                     </label>
 
                     <label for Submit>
-                        <input type="button" value="Post Review">
+                        <input type="submit" value="Post Review">
                     </label>
                 </form>
-                <h2>{{thebook.title}} Review</h2>
-
                 
-            </div>
+                
+                
+    
+                {% for reviews in thereview reversed %}
+                    
+                        
+                    {%if reviews.book.id == thebook.id %}
+                        
+                    
+                
+                <div class ='review_holder'>
+                <p class='desc'>{{reviews.rev_description}} </p>
+                 <p class='rev_name'> by {{reviews.user.first_name}} {{reviews.user.last_name}},</p>
+                 <p class= 'rev_created'> {{reviews.created_at}}</p>
+                </div>
+                
+                    {% endif %}
+                {% endfor %}
+                
+            </div> 
+         
         </div>
     </div>
 
