@@ -4,60 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static 'Bookcart.css' %}">
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">     
+                <h1>Book.com</h1>
+            </a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href='/homePage'>Home</a>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link text-white" href='/edit'>Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href='/recentorder'>Recent Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href='/logout'>Log out</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
     <div id='wrapper'>
-        <header>
-            <h1>Book.com</h1>
-            <nav>
-                <a href='/homePage'>Home</a>
-                <a href='/edit'>Profile</a>
-                <!-- <a href='/recentorder'>Recent Order</a> -->
-                <!-- <a href='/cart'>Cart</a> -->
-                <a href='/logout'>Log out</a>
-            </nav>
-        </header>
-
-
         <div id='cartdiv'> 
             <a href='/cart' id='cart'><img src='{% static "images/Cart.png" %}'></a> 
         </div>  
-
-        <div id='container'> 
-                
+        <div id='container'>    
             <div class= 'holder'>
-            
-
-
-                     <h2> {{user.first_name}}'s Order </h2>
-                     <br>
+                <h2> {{user.first_name}}'s orders </h2>
+                    <br>
                 <table style="width:100%" class='styled-table'>
-                  <thead>
-                      <tr>
-                        <th>Iten Number </th>
-                        <th>Item Purchase</th>
-                        <th>Author</th>
-                        <!-- <th> Date of purchase</th> -->
-                        
-                      </tr>
+                    <thead>
+                        <tr>
+                            <th>Iten Number </th>
+                            <th>Item Purchase</th>
+                            <th>Author</th>
+                        <th> Date of purchase</th> 
+                        </tr>
                     </thead>
                     <tbody>
                         
                         {% for order in orders %} 
                             {% if order in user.ordered_by.all %}
                         <tr>
-                        <td>{{order.id}}</td>
-                          <td> {{order.book.title}}</td>
-                          <td> {{order.book.author}}</td>
-
-                        
-                        
-  
-                      
-                      </tr>
+                            <td>{{order.id}}</td>
+                            <td> {{order.book.title}}</td>
+                            <td> {{order.book.author}}</td>
+                        </tr>
                     </tbody>
                             {% endif %}    
                     {% endfor %} 
@@ -65,12 +72,11 @@
                 </table>
                 <div id='button_holder'>
                     <button><a href="/checkout">Checkout</a></button>
-
                     <button><a href="/delete">Delete Order</a></button>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

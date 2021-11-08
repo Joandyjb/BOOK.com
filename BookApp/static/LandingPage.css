@@ -4,10 +4,8 @@
 * {
     margin:0;
     padding: 0;
-    /* outline: red dotted; */
+    
 }
-
-
 
 #wrapper{
     width: 1000;
@@ -23,11 +21,6 @@ header{
     padding-top: 10px;
     top: 0;
     align-items: center;
-}
-
-#container{
-    margin-top: 72px;
-    text-align: center;
 }
 
 h1{
@@ -57,15 +50,32 @@ nav a {
     width: 100%;
     font-family: Montserrat;
     font-size:20px;
-    
 }
 
 nav a:hover {
-    font-size: 30px;
     color:green;
+}
+
+
+#PropositionWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #1D1D1D;
+    font-family: Montserrat;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
 
 }
 
+@media screen and (max-width: 1099px) {
+    #PropositionWrapper {
+        display: flex;
+        flex-direction:column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 .PropLeft h2 {
     margin-top: 80px;
@@ -76,23 +86,19 @@ nav a:hover {
     font-family: Montserrat-600;
 }
 
-#PropositionWrapper{
-    display: flex;
-    justify-content: space-around;
-    background-color: #1D1D1D;
-    font-family: Montserrat;
-    padding-bottom: 10px;
-    margin-bottom: 100px;
-}
+
 
 .PropLeft{
     width: 600px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .PropLeft p{
     display: block;
-    width: 900px;
+    width: 800px;
     font-size: 20px;
     font-family: "Proxima Nova", sans-serif;
     color: white;
@@ -102,6 +108,14 @@ nav a:hover {
     
     
 } 
+
+
+@media screen and (max-width: 1024px) {
+    .PropLeft{
+        width: 500px;
+    }
+}
+
 
 #PropositionWrapper p{
     display: inline-block;
@@ -117,47 +131,14 @@ nav a:hover {
     display: inline-block;
     margin-top: 35px;
 }
-button {
-    width: 100px;
-    height: 45px;
-    display: block;
-    background-color: green;
-    margin: auto;
-    border: 2px solid black;
-    border-radius: 5px;
-    color: white;
-    font-weight: 700;
-    font-size: 15px ;
-    font-family: "Proxima Nova", sans-serif;
-    text-decoration: none;
-}
-
-button a {
-    text-decoration: none;
-    color: white;
-}
 
 
-button:hover {
-    width: 130px;
-    height: 50px;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-h2 {
-    display: block;
-    align-items: center;
-    color:black;
-    margin-top: 40px;
-    margin-bottom: 25px; 
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-size: 40px;
-    
+@media screen and (max-width: 1024px) {
+    #Propositonimage {
+        display: none;
+    }
     
 }
-
 
 
 #FeatureWrapper{
@@ -168,15 +149,80 @@ h2 {
     margin-bottom: 50px;
 }
 
+
+@media screen and (max-width: 1099px) {
+    #FeatureWrapper {
+        flex-direction: column;
+    }
+}
+
+
+#container{
+    margin-top: 72px;
+}
+
+
+
+
+#PricingWrapper a,  #PropositionWrapper a {
+    display: flex;
+    width: 100px;
+    height: 45px;
+    background-color: green;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 15px ;
+    font-family: "Proxima Nova", sans-serif;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+
+
+#PricingWrapper a:hover, #PropositionWrapper a:hover {
+    color: green;
+    background-color: white;
+}
+
+
+
+
+
+/* {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+} */
+
+
+
+
+h2 {
+    display: block;
+    align-items: center;
+    color:black;
+    margin-top: 40px;
+    margin-bottom: 25px; 
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5rem;
+}
+
 .Benefitsbox{
     display: inline-block;
     margin: 10px;
     border: 1px solid black;
     border-radius: 5px;
-    width: 700px;
+    width: 400px;
     height: 500px;
     margin-bottom: 50px;
-    /* align-items: center; */
 }
 
 
@@ -211,6 +257,21 @@ h2 {
     margin-bottom: 120px;
 }
 
+
+@media screen and (max-width: 1024px) {
+    #HowitworksWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    
+    
+}
+
+
 #HowitworksWrapper img{
     height: 70px;
     width: 70px;
@@ -219,11 +280,28 @@ h2 {
     
 }
 
+@media screen and (max-width: 1024px) {
+    #HowitworksWrapper img{
+        display: none;
+    } 
+    
+}
+
+
+
 .Howitbox{
     width: 25%;
     margin-bottom: 20px;
     text-align: center;
     
+}
+
+@media screen and (max-width: 1024px) {
+    .Howitbox{
+        width: 60%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }
 
 .Howitbox h3 {
@@ -247,17 +325,24 @@ h2 {
 }
 
 #PricingWrapper {
-    display: block;
-    width: 550px;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
     margin: auto;
     text-align: center;
     border: 1px solid black;
     border-radius: 5px;
 }
 
-#PricingWrapper button{
-   margin-bottom: 25px;
-   margin-top: 25px;
+@media screen and (max-width: 1024px) {
+    #PricingWrapper {
+        display: block;
+        width: 550px;
+        margin: auto;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
 }
 
 
@@ -286,8 +371,6 @@ h2 {
 }
 h3 {
     margin-bottom: 10px;
-    /* border: 1px solid black; */
-   
 }
 
 h4{ 

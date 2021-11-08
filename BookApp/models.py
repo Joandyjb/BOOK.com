@@ -92,7 +92,6 @@ class Review(models.Model):
     book= models.ForeignKey(Book,on_delete=models.CASCADE,related_name="the_book_title")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
     objects= reviewManager()
 
 

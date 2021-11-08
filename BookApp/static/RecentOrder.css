@@ -3,14 +3,9 @@
 * {
     margin:0;
     padding: 0;
-    /* outline: red dotted; */
-
+    border: 1px solid red;
 }
 
-#wrapper{
-    width: 1000;
-    margin: 0 auto;
-}
 
 header{
     height: 80px;
@@ -18,81 +13,138 @@ header{
     width: 100%;
     z-index: 12 ;
     position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding-top: 10px;
     top: 0;
     align-items: center;
-}
-
-#container{
-    margin-top: 172px;
-
+    margin-bottom: 15rem;
 }
 
 h1{
-    display: inline;
-    margin-top: 40px;
-    margin-left: 55px;
-    padding:0;
     color: white;
-    font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
+    margin-right: 1rem;
+    
 }
 
-nav{
+
+.navbar-nav {
+    width: 100%;
+    margin: 5px;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+header nav{
+    background:#000046;
     width: 100%;
-    margin: auto;
-
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav a {
-    text-decoration: none;
+
+#cartdiv {
+    margin-top: 150px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+
+#cart {
+    width:40px;
+    height: 64px;
+    margin-right: 50px;
+}
+
+#cart img {
+    width:50px;
+    
+}
+
+@media screen and (max-width: 1099px) {
+    #cart img{
+        width:40px;
+    }
+}
+
+
+
+#cart:hover {
+    cursor: pointer;
+}
+
+
+body {
+    background-color:white;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
-    margin: 10px;
-    text-align: center;
-    width: 100%;
-    font-family: Montserrat;
-
-
-
+    margin-bottom: 4%;
+    font-size:3rem ;
 }
 
-nav a:hover {
-    font-size: 20px;
-    color:green;
 
+@media screen and (max-width: 1099px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+#wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #container h2{
     color: black;
     text-align: center;
     font-family: Montserrat;
-    margin-bottom: 40px;
-    font-size: 30px;
+    font-size: 2.5rem;
+    margin-top: 6rem;;
 }
 
-.container {
+#container {
     border-collapse: collapse;
+    margin-top: 5rem;
     margin-bottom: 20px;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
+    width: 70%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: center;
-    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 
-styled-table {
+.styled-table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
     font-family: Montserrat;
-    min-width: 400px;
+    width: 60%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: center;
 }

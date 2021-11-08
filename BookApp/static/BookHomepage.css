@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
-* {
-    margin:0;
-    padding: 0;
-    /* outline: red dotted; */
-
-}
-
-#wrapper{
-    width: 100%;
-    margin: 0 auto;
-}
 
 header{
     height: 80px;
@@ -19,69 +8,38 @@ header{
     width: 100%;
     z-index: 12 ;
     position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding-top: 10px;
     top: 0;
     align-items: center;
 }
 
-#container {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-   
-    
-}
-
-#container h1{
-    color: black;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-}
-
 h1{
-    display: block;
-    margin-top: 0px;
-    margin-left: 55px;
-    padding:0;
     color: white;
-    font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
+    margin-right: 1rem;
     
-
 }
 
 
-
-nav{
+.navbar-nav {
+    width: 100%;
+    margin: 5px;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav{
+    background:#000046;
     width: 100%;
-    margin: auto;
-    
-    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-    text-align: center;
-    width: 100%;
-    font-family: Montserrat;
-    
-    
-
-}
-
-nav a:hover {
-    font-size: 20px;
-    color:green;
-
-}
 
 #cartdiv {
     margin-top: 150px;
@@ -93,27 +51,59 @@ nav a:hover {
 
 
 #cart {
-    /* margin-top: 150px;
-    display: flex;
-    justify-content: flex-end; */
-    width:64px;
+    width:40px;
     height: 64px;
     margin-right: 50px;
 }
 
+#cart img {
+    width:50px;
+    
+}
+
+@media screen and (max-width: 1099px) {
+    #cart img{
+        width:40px;
+    }
+}
+
+
+
+
 
 #cart:hover {
-    border: 1px solid black;
+    cursor: pointer;
 }
-  
+
+
+#container {
+    width: 100%;
+    display: flex;
+}
+
 h3 {
-    font-size: 25px;
+    font-size: x-large;
     margin-bottom: 15px;
     font-family: Montserrat;
 }
+
+@media screen and (max-width: 751px) {
+    h3{
+        font-size: medium;
+        
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h3{
+        font-size: small;
+    }
+}
+
+
 .books {
     display: inline-block;
-    width: 900px;
+    width: 75%;
     margin: auto;
     
 }
@@ -123,22 +113,61 @@ h3 {
     font-size: large;
     margin-bottom: 10px;
 }
+@media screen and (max-width: 751px) {
+    .books p{
+        
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .books p{
+        font-size: small ;
+    }
+}
+
+
+
 
 .books img {
-    height: 300px;
-    width: 197px ;
+    height: 100%;
+    width: 25%;
     display: inline;
     margin-right: 15px;;
     margin-bottom: 30px;
     
 }
+@media screen and (max-width: 751px) {
+    .books img{
+        height: 200px;
+        width: 107px ;
+        
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .books img{
+        height: 150px;
+        width: 90px ;
+    }
+}
+
+
+
 .seperator {
     display: inline-block;
-    width: 600px ;
+    width: 70% ;
     vertical-align: top;
 }
 
-button{
+@media screen and (max-width: 375px) {
+    .seperator{
+        width: 100% ;
+        
+    }   
+}
+    
+#container button{
     background-color: #000046;
     color: white;
     font-weight: 300;
@@ -147,24 +176,42 @@ button{
     width: 100px;
     border: none;
     border-radius: 4px;
-    margin-top: 70px;
+    margin-top: 5%;
     display: inline-block;
-   
+    font-size: 70%;
 }
 
-button:hover {
+
+
+
+@media screen and (max-width: 751px) {
+    #container button{
+        width:50px;
+        height: 20px ;
+        font-size: 40%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #container button{
+        width:40px;
+        height: 20px ;
+        margin-bottom: 70px ;
+        font-size:30% ;
+     
+    }
+}
+
+#container button:hover {
     background-color: darkgreen;
-    width: 150px;
-    height: 60px;
-    font-size: large;
 }
 
 
-button a {
+#container button a {
     text-decoration: none;
     color: white;
-    justify-content: center;
-    margin-top: 15px;
+    text-align: center;
     font-family: Montserrat;
     
     

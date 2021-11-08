@@ -1,44 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
-* {
+/* * {
     margin:0;
     padding: 0;
-    /* outline: red dotted; */
-
-}
-
-#wrapper{
-    width: 100%;
-    margin: 0 auto;
-}
+    border: solid 1px red;
+} */
 
 header{
     height: 80px;
     background:#000046;
     width: 100%;
-    z-index: 12 ;
     position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding-top: 10px;
     top: 0;
     align-items: center;
 }
 
-#container {
-    /* margin-top: 190px; */
-    width: 100%;
-    font-size: 30px;
-    padding: 50px;
-    font-family: Montserrat;
-    text-align: center;
+h1{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    margin-right: 1rem;
 }
+
+.navbar-nav {
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav{
+    background:#000046;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#cartdiv {
+    margin-top: 150px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#cart {
+    width:40px;
+    height: 64px;
+    margin-right: 50px;
+}
+
+#cart img {
+    width:50px;
     
+}
+
+@media screen and (max-width: 1099px) {
+    #cart img{
+        width:40px;
+    }
+}
+
+#cart:hover {
+    cursor: pointer;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 #container h1{
     color: black;
+    width: 100%;
     margin: auto;
     text-align: center;
+    font-size: 2rem;
+    line-height: 1;
+    
 }
 
 h1{
@@ -50,69 +97,16 @@ h1{
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
-    
-    /* margin-left: 10px; */
 }
-
-nav{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    
-    
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-    text-align: center;
-    width: 100%;
-    font-family: Montserrat;
-    
-    
-
-}
-
-nav a:hover {
-    font-size: 20px;
-    color:green;
-
-}
-
-#cartdiv {
-    margin-top: 150px;
-    margin-bottom: 45px;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-
-
-#cart {
-    width:64px;
-    height: 64px;
-    margin-right: 90px;
-}
-
-
-#cart:hover {
-    border: 1px solid black;
-    
-}
-
 
 
 .holder {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     width: 50%;
     margin: auto;
     margin-bottom: 70px;
-    border: 2px solid black;
-    border-radius:5px;
     padding: 50px;
     font-family: Montserrat;
 }
@@ -128,6 +122,7 @@ nav a:hover {
     width: 60%;
     margin-top: 15px;
     margin-bottom: 10px;
+    align-self: center;
     
 }
 
@@ -141,14 +136,13 @@ nav a:hover {
 
 .holder p {
     text-align: left;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-family: Montserrat;
     
 
 }
 
-
-button{
+#container button{
     background-color:#000046;;
     color: white;
     font-weight: 300;
@@ -159,37 +153,40 @@ button{
     border-radius: 4px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 70px;
-   
+    cursor: pointer;
 }
 
-button:hover {
-    background-color: :#000046;;
-    width: 250px;
-    height: 60px;
-    font-size: large;
+#container button:hover {
+    background-color: green;
+    
 }
 
 
-button a {
+#container button a {
     text-decoration: none;
     color: white;
     justify-content: center;
-    margin-top: 15px;
     font-family: Montserrat;
     
 }
 
-.Review{
+#Review{
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    width: 50%;
-    margin:auto;
-   
-    /* border: 2px solid black; */
     border-radius:5px;
-    
-    padding: 50px;
     font-family: Montserrat;
+    width: 50%;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .desc{
@@ -211,11 +208,15 @@ button a {
     color:green
 }
 
+label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
 input[type=text]{
-    width: 90%;
+    width: 100%;
     height: 100px;
-    display: block;
     align-items: center;
     margin: auto;
     margin-top: 10px;
@@ -236,14 +237,16 @@ input[type=submit]{
     width: 180px;
     border: none;
     border-radius: 4px;
-   
-    
+    align-items: center;
+}
+
+input[type=submit]:hover{
+    background-color: green;
+    cursor: pointer;
 }
 
 .review_holder{
-    /* border: 1px black solid; */
-    border-radius: 5px;
-    margin-bottom: 15px;
-    padding: 5px;
+    
+    width: 100%;
     
 }
